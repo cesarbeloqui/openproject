@@ -4,11 +4,11 @@ services:
         image: openproject/openproject:14
         container_name: openproject        
         ports:
-            - "8200:80"
+            - "8080:80"
         restart: unless-stopped    
         environment:
             - OPENPROJECT_SECRET_KEY_BASE=secret
-            - OPENPROJECT_HOST__NAME=localhost:8200    # tudominio.com
+            - OPENPROJECT_HOST__NAME=openproject.beloquicesar.ar:8080    # tudominio.com
             - OPENPROJECT_HTTPS=false
             - OPENPROJECT_DEFAULT__LANGUAGE=es
         volumes:
